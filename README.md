@@ -5,7 +5,7 @@ This week, you’ll take a fully functioning Google Books API search engine buil
   
 ## Deployed version can be found on 
 
-<img width="1433" alt="demo" src="https://user-images.githubusercontent.com/13324397/116847510-4f6bf100-abb0-11eb-8d9e-0493767811ae.png">
+<img width="1433" alt="demo" src="">
 
 ## Table of Contents 
 * 🔧 [Installation](#installation)
