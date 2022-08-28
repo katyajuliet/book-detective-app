@@ -9,7 +9,7 @@ This week, you’ll take a fully functioning Google Books API search engine buil
 ## repo 
 [Repo](https://github.com/katyajuliet/book-detective-app)
 
-<img width="1433" alt="demo" src="">
+
 
 ## Table of Contents 
 * 🔧 [Installation](#installation)
