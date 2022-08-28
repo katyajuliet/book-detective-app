@@ -20,14 +20,23 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// if we're in production, serve client/build as static assets
+// // if we're in production, serve client/build as static assets
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
+// }
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
+  // Only enable this in production
+
+  app.use("/", express.static("./client/build"));
+  app.use("/*", (req, res) => {
+    res.sendFile(path.resolve("./client/build/index.html"));
+  });
 }
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
 
 db.once("open", () => {
   app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));

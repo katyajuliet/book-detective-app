@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Auth from "../utils/auth";
+import { searchGoogleBooks } from "../utils/API";
+import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
+import { SAVE_BOOK } from "../utils/mutations";
+import { useMutation } from "@apollo/react-hooks";
 import {
   Jumbotron,
   Container,
@@ -9,11 +14,19 @@ import {
   CardColumns,
 } from "react-bootstrap";
 
-import Auth from "../utils/auth";
-import { searchGoogleBooks } from "../utils/API";
-import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
-import { SAVE_BOOK } from "../utils/mutations";
-import { useMutation } from "@apollo/react-hooks";
+const styles = {
+  card: {
+    backgroundColor: '#9ECCDA',
+    borderRadius: 55,
+    padding: '3rem'
+  },
+  cardImage: {
+    objectFit: 'cover',
+    borderRadius: 35,
+  }
+}
+
+
 
 const SearchBooks = () => {
   // create state for holding returned google api data
@@ -134,9 +147,9 @@ const SearchBooks = () => {
         <CardColumns>
           {searchedBooks.map((book) => {
             return (
-              <Card key={book.bookId} border="dark">
+              <Card key={book.bookId} border="dark" style={styles.card}>
                 {book.image ? (
-                  <Card.Img
+                  <Card.Img style={styles.cardImage}
                     src={book.image}
                     alt={`The cover for ${book.title}`}
                     variant="top"
