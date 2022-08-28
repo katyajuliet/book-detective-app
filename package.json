@@ -1,5 +1,5 @@
 {
-  "name": "book-detective-app",
+  "name": "book-detective",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
