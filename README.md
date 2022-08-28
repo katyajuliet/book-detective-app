@@ -9,6 +9,9 @@ This week, you’ll take a fully functioning Google Books API search engine buil
 ## repo 
 [Repo](https://github.com/katyajuliet/book-detective-app)
 
+## screenshots
+![screenshot](https://drive.google.com/file/d/1ByV5WhoJsMMbyfVRzSvdTsR8xThHTUBK/view?usp=sharing)
+![screenshot](https://drive.google.com/file/d/1bX1eqL29f6UsMfegQtcvuXl67YhdwRGX/view?usp=sharing)
 
 
 ## Table of Contents 
